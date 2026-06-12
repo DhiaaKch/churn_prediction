@@ -17,7 +17,7 @@ def run_eda(path="data/customers.csv"):
     print(f"  Churn rate: {df['churn'].mean():.1%}\n")
     print(df.describe(include="all").T.to_string())
 
-    # ── Figure 1: target balance + numeric distributions ──────────────────
+  
     fig = plt.figure(figsize=(14, 9))
     fig.suptitle("Customer Churn – Exploratory Analysis", fontsize=14, y=1.01)
     gs = gridspec.GridSpec(2, 3, figure=fig, hspace=0.45, wspace=0.35)
@@ -79,7 +79,6 @@ def run_eda(path="data/customers.csv"):
     fig.savefig("outputs/eda_overview.png", dpi=130, bbox_inches="tight")
     plt.close(fig)
 
-    # ── Figure 2: correlation heatmap ──────────────────────────────────────
     num_cols = ["tenure", "monthly_fee", "num_products",
                 "support_calls", "senior_citizen", "has_partner",
                 "has_contract", "paperless_billing", "churn"]
