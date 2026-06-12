@@ -1,9 +1,3 @@
-"""
-train_evaluate.py
-Trains two classifiers (Logistic Regression and Random Forest),
-compares their performance, and saves all evaluation plots.
-"""
-
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -27,7 +21,6 @@ from sklearn.metrics import (
 sns.set_theme(style="whitegrid", palette="muted")
 
 
-# ── helpers ────────────────────────────────────────────────────────────────
 
 def load_and_prepare(path="data/customers.csv"):
     df = pd.read_csv(path)
@@ -47,8 +40,6 @@ def print_section(title):
     print(f"{'─'*55}")
 
 
-# ── main ───────────────────────────────────────────────────────────────────
-
 def run(seed=42):
     X, y, feature_cols = load_and_prepare()
 
@@ -56,7 +47,7 @@ def run(seed=42):
         X, y, test_size=0.20, random_state=seed, stratify=y
     )
 
-    # ── define models ──────────────────────────────────────────────────────
+  
     # Logistic Regression needs scaling; RandomForest doesn't care but we
     # keep it inside a pipeline for consistency.
     models = {
@@ -108,7 +99,7 @@ def run(seed=42):
             "auc":     roc_auc_val,
         }
 
-    # ── Plot 1: Confusion Matrices ─────────────────────────────────────────
+   
     fig, axes = plt.subplots(1, 2, figsize=(11, 4))
     fig.suptitle("Confusion Matrices – Test Set", fontsize=13)
 
@@ -122,7 +113,7 @@ def run(seed=42):
     fig.savefig("outputs/confusion_matrices.png", dpi=130, bbox_inches="tight")
     plt.close(fig)
 
-    # ── Plot 2: ROC Curves ─────────────────────────────────────────────────
+    
     fig, ax = plt.subplots(figsize=(7, 5))
     colors = ["#4C72B0", "#DD8452"]
 
@@ -139,7 +130,6 @@ def run(seed=42):
     fig.savefig("outputs/roc_curves.png", dpi=130, bbox_inches="tight")
     plt.close(fig)
 
-    # ── Plot 3: Feature Importance (Random Forest) ─────────────────────────
     rf_clf = results["Random Forest"]["model"].named_steps["clf"]
     importances = rf_clf.feature_importances_
     feat_df = (
@@ -156,8 +146,6 @@ def run(seed=42):
     plt.tight_layout()
     fig.savefig("outputs/feature_importance.png", dpi=130, bbox_inches="tight")
     plt.close(fig)
-
-    # ── Plot 4: CV Score Comparison ────────────────────────────────────────
     fig, ax = plt.subplots(figsize=(7, 4))
     data_to_plot = [cv_scores[n] for n in models]
     bp = ax.boxplot(data_to_plot, labels=list(models.keys()),
