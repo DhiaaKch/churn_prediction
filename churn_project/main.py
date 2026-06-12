@@ -1,11 +1,3 @@
-"""
-main.py  –  Customer Churn Prediction Pipeline
-Run this file to execute the full workflow end-to-end.
-
-Usage:
-    python3 main.py
-"""
-
 import os
 from generate_data import make_dataset
 from eda import run_eda
