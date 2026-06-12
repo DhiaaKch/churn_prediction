@@ -1,8 +1,3 @@
-"""
-eda.py  –  Exploratory Data Analysis
-Run this first to understand the data before touching any models.
-"""
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
