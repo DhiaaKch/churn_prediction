@@ -1,8 +1,3 @@
-"""
-generate_data.py
-Simulates a telecom customer dataset with realistic churn patterns.
-Keeps it small (~2000 rows) so it runs fast anywhere.
-"""
 
 import numpy as np
 import pandas as pd
