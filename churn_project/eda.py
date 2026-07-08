@@ -89,7 +89,7 @@ def run_eda(path="data/customers.csv"):
                 center=0, linewidths=0.5, ax=ax)
     ax.set_title("Feature Correlation Matrix")
     fig2.tight_layout()
-    fig2.savefig("outputs/correlation_heatmap.png", dpi=130, bbox_inches="tight")
+    fig2.savefig("outputs/correlation.png", dpi=130, bbox_inches="tight")
     plt.close(fig2)
 
     print("\nEDA plots saved → outputs/")
