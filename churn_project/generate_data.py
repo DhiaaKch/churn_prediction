@@ -49,4 +49,4 @@ def make_dataset(n=2000, seed=42):
 if __name__ == "__main__":
     df = make_dataset()
     df.to_csv("data/customers.csv", index=False)
-    print(f"Saved {len(df)} rows. Churn rate: {df['churn'].mean():.1%}")
+    print(f"Saved  {len(df)} rows. Churn rate: {df['churn'].mean():.1%}")
