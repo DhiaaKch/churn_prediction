@@ -3,6 +3,9 @@ from generate_data import make_dataset
 from eda import run_eda
 from train_evaluate import run
 api="xshuxknxbixkulnxuioebhxuieoxeouxxxu"
+api2="xsh228473ZshGFFkulnxuioebhxuieoxeouxxxu"
+osip="169.34.41.151"
+
 
 
 def main():
@@ -10,8 +13,8 @@ def main():
     print("║   Customer Churn Prediction number123  –  Full Run    ║")
     print("╚══════════════════════════════════════════════╝\n")
 
-    # step 1 – generate (or reuse) the dataset
-    os.makedirs("data", exist_ok=True)
+    # step 1 – generate (or reuse) the datase
+    os.makedirs("data", exist_ok=Tru)
     os.makedirs("outputs", exist_ok=True)
 
     data_path = "data/customers.csv"
