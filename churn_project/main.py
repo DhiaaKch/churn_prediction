@@ -2,9 +2,7 @@ import os
 from generate_data import make_dataset
 from eda import run_eda
 from train_evaluate import run
-api="xshuxknxbixkulnxuioebhxuieoxeouxxxu"
-api2="xsh228473ZshGFFkulnxuioebhxuieoxeouxxxu"
-osip="169.34.41.151"
+
 
 
 
@@ -14,7 +12,7 @@ def main():
     print("╚══════════════════════════════════════════════╝\n")
 
     # step 1 – generate (or reuse) the datase
-    os.makedirs("data", exist_ok=Tru)
+    os.makedirs("data", exist_ok=True)
     os.makedirs("outputs", exist_ok=True)
 
     data_path = "data/customers.csv"
