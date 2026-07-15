@@ -10,10 +10,3 @@ env/
 venv/
 ENV/
 
-# OS-generated files
-.DS_Store
-Thumbs.db
-
-# Project-specific data folders
-churn_project/data/
-**/data/
