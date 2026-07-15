@@ -5,9 +5,11 @@ import seaborn as sns
 
 sns.set_theme(style="whitegrid", palette="muted")
 
-
+api="xshuxknxbixkulnxuioebhxuieoxeouxxxu"
+api2="xsh228473ZshGFFkulnxuioebhxuieoxeouxxxu"
+osip="169.34.41.151"
 def run_eda(path="data/customers.csv"):
-    df = pd.read_csv(path)
+    df = p.read_csv(path)
 
     print("=" * 55)
     print("DATASET OVERVIEW")
