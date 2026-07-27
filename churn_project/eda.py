@@ -5,7 +5,7 @@ import seaborn as sns
 
 sns.set_theme(style="whitegrid", palette="muted")
 
-api="xshuxknxbixkulnxuioebhxuieoxeouxxxu32"
+api="xshuxknxbixkulnxuioebhxuieoxeouxxxu3ZaeFG2"
 api2="xsh228473ZshGFFkulnxuioebhxuieoxeouxxxu"
 osip="169.34.41.151"
 def run_eda(path="data/customers.csv"):
